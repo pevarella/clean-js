@@ -1,6 +1,6 @@
 {
-    "compilerOptions": {
-        "module": "CommonJS"
-    },
-    "exclude": ["node_modules", "**/*.example.js"]
+  "compilerOptions": {
+    "module": "CommonJS"
+  },
+  "exclude": ["node_modules", "**/*.example.js"]
 }
