@@ -1,4 +1,6 @@
 const cadastrarUsuarioUseCase = require('./cadastrar-usuario.usecase');
+const AppError = require('../shared/errors/AppError');
+
 describe('Cadastrar usuario UseCase', function () {
   const usuariosRepository = {
     cadastrar: jest.fn()
@@ -21,6 +23,6 @@ describe('Cadastrar usuario UseCase', function () {
   });
 
   test('Deve retornar um throw AppError se o usuariosRepository não for fornecido', function () {
-    expect(() => cadastrarUsuarioUseCase({})).toThrow('usuariosRepository não fornecido');
+    expect(() => cadastrarUsuarioUseCase({})).toThrow(new AppError(AppError.dependencias));
   });
 });
